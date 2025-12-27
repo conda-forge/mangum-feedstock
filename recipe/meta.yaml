@@ -1,5 +1,5 @@
 {% set name = "mangum" %}
-{% set version = "0.19.0" %}
+{% set version = "0.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mangum-{{ version }}.tar.gz
-  sha256: e388e7c491b7b67970f8234e46fd4a7b21ff87785848f418de08148f71cf0bd6
+  sha256: 0050447b60d832dcc45cc9d917c9e0f4e9174e2d9630f621d567510d51d286bd
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
