@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mangum
-  version: 0.20.0
+  version: "0.21.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mangum-${{ version }}.tar.gz
-  sha256: 0050447b60d832dcc45cc9d917c9e0f4e9174e2d9630f621d567510d51d286bd
+  sha256: e31ed72d67f9958fa4379f65df77729906dec6dfa00afa6ed4e06c77833000de
 
 build:
   number: 0
