@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mangum
-  version: "0.21.0"
+  version: "0.22.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mangum-${{ version }}.tar.gz
-  sha256: e31ed72d67f9958fa4379f65df77729906dec6dfa00afa6ed4e06c77833000de
+  sha256: 701936891aaed8ed66479b871c2bda87ba288fd01c7d5dd6ba6c8e9ba1c239d1
 
 build:
   number: 0
@@ -24,14 +24,16 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - typing-extensions
+    - typing_extensions
 
 tests:
   - python:
       imports:
         - mangum
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: AWS Lambda support for ASGI applications
