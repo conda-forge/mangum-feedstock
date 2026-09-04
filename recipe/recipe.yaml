@@ -24,14 +24,16 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - typing-extensions
+    - typing_extensions
 
 tests:
   - python:
       imports:
         - mangum
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: AWS Lambda support for ASGI applications
